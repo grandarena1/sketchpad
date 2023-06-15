@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./sketchpad.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchpad</title>
+  </head>
+  <body>
+    <div id="flex-container">
+        <div class="title">
+            <h1>Sketchpad</h1>
+        </div>
+        <div class="mode">
+          Mode: Coloring
+        </div>
+        <div class="content">
+            <div class="grid">
+
+            </div>
+            <div class="buttons">
+                <button class="blackButton" onclick="changeSquareColor('black')">Black</button>
+                <button class="eraserButton" onclick="changeSquareColor('lightgrey')">Eraser</button>
+                <button class="randomButton" onclick="changeSquareColor('random')">Random</button>
+                <button class="resetButton" onclick="resetGrid()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Grid" value="16" onchange="changeSize(this.value)">
+                <button>Set Size</button>
+            </div>
+            <div class="error">
+              Input must be between 2 and 100
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
